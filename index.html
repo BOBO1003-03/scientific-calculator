@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <!-- Header with theme switcher -->
+            <div class="header">
+                <h1>Scientific Calculator</h1>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+            </div>
+
+            <!-- Display section -->
+            <div class="display-section">
+                <div class="previous-operand" id="previousOperand"></div>
+                <div class="current-operand" id="currentOperand">0</div>
+            </div>
+
+            <!-- History section -->
+            <div class="history-section">
+                <div class="history-header">
+                    <h3>History</h3>
+                    <button class="clear-history" id="clearHistory" title="Clear history">✕</button>
+                </div>
+                <div class="history-list" id="historyList"></div>
+            </div>
+
+            <!-- Calculator buttons -->
+            <div class="buttons-grid">
+                <!-- Row 1: Functions -->
+                <button class="btn function-btn" data-action="sin">sin</button>
+                <button class="btn function-btn" data-action="cos">cos</button>
+                <button class="btn function-btn" data-action="tan">tan</button>
+                <button class="btn function-btn" data-action="log">log</button>
+
+                <!-- Row 2: More functions -->
+                <button class="btn function-btn" data-action="ln">ln</button>
+                <button class="btn function-btn" data-action="sqrt">√</button>
+                <button class="btn function-btn" data-action="power">x^y</button>
+                <button class="btn operator-btn" data-operator="/">÷</button>
+
+                <!-- Row 3: Numbers and operations -->
+                <button class="btn number-btn" data-number="7">7</button>
+                <button class="btn number-btn" data-number="8">8</button>
+                <button class="btn number-btn" data-number="9">9</button>
+                <button class="btn operator-btn" data-operator="*">×</button>
+
+                <!-- Row 4: Numbers and operations -->
+                <button class="btn number-btn" data-number="4">4</button>
+                <button class="btn number-btn" data-number="5">5</button>
+                <button class="btn number-btn" data-number="6">6</button>
+                <button class="btn operator-btn" data-operator="-">−</button>
+
+                <!-- Row 5: Numbers and operations -->
+                <button class="btn number-btn" data-number="1">1</button>
+                <button class="btn number-btn" data-number="2">2</button>
+                <button class="btn number-btn" data-number="3">3</button>
+                <button class="btn operator-btn" data-operator="+">+</button>
+
+                <!-- Row 6: Special operations -->
+                <button class="btn function-btn" data-action="pi">π</button>
+                <button class="btn number-btn" data-number="0">0</button>
+                <button class="btn number-btn" data-number=".">.</button>
+                <button class="btn equals-btn" data-action="equals">=</button>
+
+                <!-- Row 7: Additional operations -->
+                <button class="btn function-btn" data-action="factorial">n!</button>
+                <button class="btn function-btn" data-action="percent">%</button>
+                <button class="btn clear-btn" data-action="delete">⌫</button>
+                <button class="btn clear-btn" data-action="clear">C</button>
+            </div>
+
+            <!-- Info section -->
+            <div class="info-section">
+                <p>Press <kbd>Enter</kbd> or <kbd>=</kbd> to calculate | <kbd>C</kbd> to clear | <kbd>Backspace</kbd> to delete</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
